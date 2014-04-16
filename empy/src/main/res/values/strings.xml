@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Empy</string>
+    <string name="service_desc">A DashClock plugin to explain why the Empire State Building is the color that it is today.</string>
+</resources>

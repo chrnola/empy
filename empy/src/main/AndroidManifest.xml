@@ -1,0 +1,20 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="co.pinola.empy">
+
+    <uses-permission android:name="com.google.android.apps.dashclock.permission.READ_EXTENSION_DATA" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application android:allowBackup="true"
+        android:label="@string/app_name">
+
+        <service android:name=".service.DashClockService">
+            <intent-filter>
+                <action android:name="com.google.android.apps.dashclock.Extension" />
+            </intent-filter>
+            <meta-data android:name="protocolVersion" android:value="1" />
+            <meta-data android:name="description" android:value="@string/service_desc" />
+        </service>
+
+    </application>
+
+</manifest>
