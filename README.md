@@ -1,4 +1,4 @@
-Empy
+Empy [![Build Status](https://travis-ci.org/chrnola/empy.svg?branch=master)](https://travis-ci.org/chrnola/empy)
 ====
 
 Empy is a simple [DashClock](https://code.google.com/p/dashclock/) extension that reports information about the color of the lights atop the Empire State Building in NYC.
