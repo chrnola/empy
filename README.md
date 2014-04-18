@@ -1,7 +1,7 @@
 Empy
 ====
 
-Empy is a simple DashClock extension that reports information about the color of the lights atop the Empire State Building in NYC.
+Empy is a simple [DashClock](https://code.google.com/p/dashclock/) extension that reports information about the color of the lights atop the Empire State Building in NYC.
 
 Background
 ----------
@@ -17,4 +17,4 @@ I aim to polish this up a bit and eventually release it on Google Play. I could 
 
 Credits
 -------
-This wouldn't be possible without the awesome http://whatcoloristheempirestatebuilding.com/ (@esbColors).
+This wouldn't be possible without the awesome http://whatcoloristheempirestatebuilding.com/ ([@esbColors](https://twitter.com/esbcolors)).
