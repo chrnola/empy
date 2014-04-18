@@ -15,6 +15,11 @@ Plans
 
 I aim to polish this up a bit and eventually release it on Google Play. I could probably use some help with the assets.
 
+How To Compile
+--------------
+
+Import the Gradle build script using Android Studio.
+
 Credits
 -------
 This wouldn't be possible without the awesome http://whatcoloristheempirestatebuilding.com/ ([@esbColors](https://twitter.com/esbcolors)).
