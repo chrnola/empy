@@ -31,3 +31,6 @@ proguard/
 gradlew
 
 gradlew.bat
+
+*.*~
+
