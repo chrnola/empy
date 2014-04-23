@@ -58,7 +58,7 @@ public class ServiceDataManager implements IServiceDataManager {
     private int GetImageCode()
     {
         // TODO: Get a real image
-        return R.drawable.empy;
+        return R.drawable.dash;
     }
 
     public static String GetDescription(ColorInfo colorInfo)
