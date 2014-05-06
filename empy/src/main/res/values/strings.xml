@@ -4,4 +4,5 @@
     <string name="SETTING_HIDE_NO_EVENT">SETTING_HIDE_NO_EVENT</string>
     <string name="SETTING_HIDE_NO_EVENT_TITLE">Hide on normal day?</string>
     <string name="SETTING_HIDE_NO_EVENT_SUMMARY">Don\'t show color info if nothing special is happening today.</string>
+    <string name="title_settings">Settings</string>
 </resources>
