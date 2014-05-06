@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Empy</string>
     <string name="service_desc">A DashClock plugin to explain why the Empire State Building is the color that it is today.</string>
+    <string name="SETTING_HIDE_NO_EVENT">SETTING_HIDE_NO_EVENT</string>
+    <string name="SETTING_HIDE_NO_EVENT_TITLE">Hide on normal day?</string>
+    <string name="SETTING_HIDE_NO_EVENT_SUMMARY">Don\'t show color info if nothing special is happening today.</string>
 </resources>

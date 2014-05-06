@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBoxPreference android:key="@string/SETTING_HIDE_NO_EVENT"
+        android:title="@string/SETTING_HIDE_NO_EVENT_TITLE"
+        android:summary="@string/SETTING_HIDE_NO_EVENT_SUMMARY"
+        android:defaultValue="true"/>
+</PreferenceScreen>
