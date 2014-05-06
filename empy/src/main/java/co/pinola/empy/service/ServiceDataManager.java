@@ -1,6 +1,8 @@
 package co.pinola.empy.service;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.res.Resources;
 import android.net.Uri;
 
 import com.google.common.base.Joiner;
@@ -21,7 +23,7 @@ public class ServiceDataManager implements IServiceDataManager {
 
     private IColorInfoCache cache = new ColorInfoCache();
 
-    public DashClockInfo GetUpdatedInfo(int reasonCode)
+    public DashClockInfo GetUpdatedInfo(int reasonCode, SharedPreferences prefs)
     {
         // TODO: Do something with the reason
 
@@ -32,26 +34,44 @@ public class ServiceDataManager implements IServiceDataManager {
         ColorInfo colorInfo = cache.GetColorInfo(currentDate);
 
         // Construct a DashClockInfo to send back to the DashClock API
-        return PrepareUpdateInfo(colorInfo);
+        return PrepareUpdateInfo(colorInfo, prefs);
     }
 
-    private DashClockInfo PrepareUpdateInfo(ColorInfo colorInfo)
+    private DashClockInfo PrepareUpdateInfo(ColorInfo colorInfo, SharedPreferences prefs)
     {
         if (colorInfo == null)
         {
-            throw new IllegalArgumentException("Given ColorInfo must not be null");
+            throw new IllegalArgumentException("Given ColorInfo must not be null.");
         }
 
-        return new DashClockInfo(IsVisible(),
+        if (prefs == null)
+        {
+            throw new IllegalArgumentException("Given SharedPreferences must not be null.");
+        }
+
+        return new DashClockInfo(IsVisible(colorInfo, UserRequestedHideOnNormalDays(prefs)),
                 GetImageCode(),
                 FormatColors(colorInfo),
-                colorInfo.event,
+                GetDescription(colorInfo),
                 GetClickIntent());
     }
 
-    private boolean IsVisible()
+    private boolean UserRequestedHideOnNormalDays(SharedPreferences prefs)
+    {
+        String settingKey = Resources.getSystem().getString(R.string.SETTING_HIDE_NO_EVENT);
+
+        return prefs.getBoolean(settingKey, true);
+    }
+
+    private boolean IsVisible(ColorInfo colorInfo, boolean userRequestedHideOnNormal)
     {
         // TODO: Return false during the day?
+
+        if(colorInfo.IsNormalDay() && userRequestedHideOnNormal)
+        {
+            return false;
+        }
+
         return true;
     }
 
